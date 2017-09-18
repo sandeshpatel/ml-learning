@@ -122,9 +122,9 @@ end
 function response = getResponse(url, body)
 % try using urlread() and a secure connection
   params = {'jsonBody', body};
-%  [response, success] = urlread(url, 'post', params);
+  [response, success] = urlread(url, 'post', params);
 
-  if (0 == 0)
+  if (success == 0)
     % urlread didn't work, try curl & the peer certificate patch
     if ispc
       % testing note: use 'jsonBody =' for a test case
